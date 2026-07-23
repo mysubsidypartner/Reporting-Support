@@ -1,27 +1,360 @@
-<p class="lead">申請枠・事業者区分・導入内容の組み合わせで手順が異なります。ご自身に合うものを1つ選んでください。</p>
+<div class="gsite-embed">
+<div class="wrap">
 
-<h2>通常枠</h2>
-<ul class="cards">
-  <li><a href="tejun-tsujo.html">通常枠</a></li>
-</ul>
+<div class="hdr">
+  <h1>📋 実績報告 手順ガイド</h1>
+  <p>IT導入補助金 | 申請マイページでの操作手順</p>
+</div>
 
-<h2>インボイス枠｜中小企業</h2>
-<ul class="cards">
-  <li><a href="tejun-inv-chusho-pc1-pos1.html">PC あり<span class="note">POS あり</span></a></li>
-  <li><a href="tejun-inv-chusho-pc1-pos0.html">PC あり<span class="note">POS なし</span></a></li>
-  <li><a href="tejun-inv-chusho-pc0-pos1.html">PC なし<span class="note">POS あり</span></a></li>
-  <li><a href="tejun-inv-chusho-pc0-pos0.html">PC なし<span class="note">POS なし</span></a></li>
-</ul>
+<!-- 選択ツール -->
+<div class="admin-box">
+  <h2>🔍 情報を選択してください</h2>
+  <div class="gen-grid">
+    <div class="gen-field">
+      <label>補助金の枠</label>
+      <select id="g-waku" onchange="gen()">
+        <option value="tsujou">通常枠</option>
+        <option value="invoice">インボイス枠</option>
+      </select>
+    </div>
+    <div class="gen-field">
+      <label>手順</label>
+      <select id="g-tab" onchange="gen()">
+        <option value="1">① 添付・送信</option>
+        <option value="3">③ 事務局へ提出</option>
+      </select>
+    </div>
+    <div class="gen-sep hidden" id="g-sep">▼ インボイス枠の設定</div>
+    <div class="gen-field hidden" id="g-row-kibo">
+      <label>会社規模</label>
+      <select id="g-kibo" onchange="gen()">
+        <option value="chuusho">中小企業</option>
+        <option value="shoukibo">小規模事業者</option>
+      </select>
+    </div>
+    <div class="gen-field hidden" id="g-row-pc">
+      <label>PC・タブレット等の導入</label>
+      <select id="g-pc" onchange="gen()">
+        <option value="yes">はい（導入した）</option>
+        <option value="no">いいえ（導入しない）</option>
+      </select>
+    </div>
+    <div class="gen-field hidden" id="g-row-pos">
+      <label>POSレジ等の導入</label>
+      <select id="g-pos" onchange="gen()">
+        <option value="yes">はい（導入した）</option>
+        <option value="no">いいえ（導入しない）</option>
+      </select>
+    </div>
+  </div>
+</div>
 
-<h2>インボイス枠｜小規模事業者</h2>
-<ul class="cards">
-  <li><a href="tejun-inv-shokibo-pc1-pos1.html">PC あり<span class="note">POS あり</span></a></li>
-  <li><a href="tejun-inv-shokibo-pc1-pos0.html">PC あり<span class="note">POS なし</span></a></li>
-  <li><a href="tejun-inv-shokibo-pc0-pos1.html">PC なし<span class="note">POS あり</span></a></li>
-  <li><a href="tejun-inv-shokibo-pc0-pos0.html">PC なし<span class="note">POS なし</span></a></li>
-</ul>
+<!-- フロー -->
+<div class="flow-wrap">
+  <div class="flow-lbl">完了までの流れ</div>
+  <div class="flow-bar">
+    <div class="fi" id="fi1"><span class="fi-n">①</span><div>貴社作業<br>添付作業</div></div>
+    <div class="fi done"><span class="fi-n">②</span><div>弊社作業<br>内容確認</div></div>
+    <div class="fi" id="fi3"><span class="fi-n">③</span><div>貴社作業<br>事務局提出</div></div>
+  </div>
+</div>
 
-<h2>最後に</h2>
-<ul class="cards">
-  <li><a href="tejun-teishutsu.html">全枠共通（事務局への提出）</a></li>
-</ul>
+<!-- タブ -->
+<div class="tab-btns">
+  <button class="tbtn on" id="tab1" onclick="switchTab(1)">
+    <span class="tn">①</span><span>貴社作業</span><span class="ts">添付・送信</span>
+  </button>
+  <button class="tbtn" id="tab3" onclick="switchTab(3)">
+    <span class="tn">③</span><span>貴社作業</span><span class="ts">事務局へ提出</span>
+  </button>
+</div>
+
+<div class="preview-label">▼ 選択内容のプレビュー</div>
+
+<!-- ① タブ -->
+<div class="tc on" id="body1">
+  <div class="steps">
+    <div class="step">
+      <div class="s-left"><div class="s-circle">1</div><div class="s-line"></div></div>
+      <div class="s-body"><div class="scard">
+        <div class="stitle">🔐 申請マイページにログイン</div>
+        <div class="urlc">
+          <div class="urlc-l">IT導入補助金 申請マイページ</div>
+          <a class="urll" href="https://portal.shinsei.it-shien.smrj.go.jp/" target="_blank">https://portal.shinsei.it-shien.smrj.go.jp/</a>
+        </div>
+        <div style="margin-top:9px;display:flex;gap:5px;flex-wrap:wrap;align-items:center;">
+          <span class="ubtn gr">申請者メニュー</span>
+          <span style="color:#94A3B8;font-size:15px;">→</span>
+          <span class="ubtn p">実績報告情報編集</span>
+        </div>
+      </div></div>
+    </div>
+    <div class="step">
+      <div class="s-left"><div class="s-circle">2</div><div class="s-line"></div></div>
+      <div class="s-body"><div class="scard">
+        <div class="stitle">📄 実績報告の説明画面</div>
+        <div class="sdesc">説明書きが表示されます。そのまま下へスクロールして「次へ」を押してください。</div>
+        <span class="ubtn p">次へ →</span>
+      </div></div>
+    </div>
+    <div class="step">
+      <div class="s-left"><div class="s-circle">3</div><div class="s-line"></div></div>
+      <div class="s-body"><div class="scard">
+        <div class="stitle">📎 請求書の添付</div>
+        <div class="fa"><div class="fi2">1</div><div><div class="fn">1_請求明細書_事業者名</div></div></div>
+        <div style="margin-top:7px;"><span class="ubtn p">次へ →</span></div>
+      </div></div>
+    </div>
+    <div class="step">
+      <div class="s-left"><div class="s-circle">4</div><div class="s-line"></div></div>
+      <div class="s-body"><div class="scard">
+        <div class="stitle">🏦 支払方法の選択</div>
+        <div class="sdesc">「銀行振込」を選択してください。</div>
+        <div class="bbox">
+          <div class="rrow"><div class="rdot on"><div class="rin"></div></div><b>銀行振込</b><span style="color:#2563EB;font-size:11px;margin-left:5px;">← こちらを選択</span></div>
+          <div class="rrow"><div class="rdot"></div><span style="color:#94A3B8;">クレジットカード払い</span></div>
+        </div>
+        <div style="margin-top:7px;"><span class="ubtn p">次へ →</span></div>
+      </div></div>
+    </div>
+    <div class="step">
+      <div class="s-left"><div class="s-circle">5</div><div class="s-line"></div></div>
+      <div class="s-body"><div class="scard">
+        <div class="stitle">💳 支払証憑の添付</div>
+        <div class="fa"><div class="fi2">2</div><div><div class="fn">2_支払証憑_事業者名</div></div></div>
+        <div style="margin-top:7px;"><span class="ubtn p">次へ →</span></div>
+      </div></div>
+    </div>
+    <div class="step">
+      <div class="s-left"><div class="s-circle">6</div><div class="s-line"></div></div>
+      <div class="s-body"><div class="scard">
+        <div class="stitle">📁 その他資料添付 <span id="kibo-badge" class="bdg a"></span></div>
+        <div id="s6-none">
+          <div class="sdesc">この画面での添付書類はございません。</div>
+          <div class="note i"><span class="ni">ℹ️</span><span>添付不要 — そのまま「次へ」を押してください</span></div>
+        </div>
+        <div id="s6-file" class="hidden">
+          <div class="sdesc">下記ファイルを添付してください。</div>
+          <div class="fa"><div class="fi2">3</div><div><div class="fn">3_従業員一覧_事業者名</div></div></div>
+        </div>
+        <div style="margin-top:7px;"><span class="ubtn p">次へ →</span></div>
+      </div></div>
+    </div>
+    <div class="step">
+      <div class="s-left"><div class="s-circle">7</div><div class="s-line"></div></div>
+      <div class="s-body"><div class="scard">
+        <div class="stitle">💻 ソフトウェア証憑の添付</div>
+        <div class="fa"><div class="fi2">4</div><div><div class="fn">4_ソフトウェア証憑_事業者名</div></div></div>
+        <div style="margin-top:7px;"><span class="ubtn p">次へ →</span></div>
+      </div></div>
+    </div>
+    <div id="s8" class="step hidden">
+      <div class="s-left"><div class="s-circle" id="n8">8</div><div class="s-line"></div></div>
+      <div class="s-body"><div class="scard">
+        <div class="stitle">🖥️ ハードウェア導入情報（PC・タブレット等） <span class="bdg b">インボイス枠</span></div>
+        <div class="sdesc">ハードウェア導入を行いましたか？</div>
+        <div id="s8-yes" class="hidden">
+          <div class="bbox">
+            <div class="bbox-t">「はい」を選択し、以下を添付してください</div>
+            <div class="rrow"><div class="rdot on"><div class="rin"></div></div><b>はい</b></div>
+            <div class="fa"><div class="fi2">5</div><div><div class="fl">納品書欄</div><div class="fn">5_ハードウェア導入情報（納品書）_事業者名</div></div></div>
+            <div class="fa"><div class="fi2" style="background:#059669;">6</div><div><div class="fl">現物写真欄</div><div class="fn">6_ハードウェア導入情報（現物写真）_事業者名</div></div></div>
+          </div>
+        </div>
+        <div id="s8-no" class="hidden">
+          <div class="bbox">
+            <div class="rrow"><div class="rdot on"><div class="rin"></div></div><b>いいえ</b></div>
+            <div class="note i" style="margin-top:6px;"><span class="ni">ℹ️</span><span>「いいえ」を選択するだけでOKです</span></div>
+          </div>
+        </div>
+        <div style="margin-top:7px;"><span class="ubtn p">次へ →</span></div>
+      </div></div>
+    </div>
+    <div id="s9" class="step hidden">
+      <div class="s-left"><div class="s-circle" id="n9">9</div><div class="s-line"></div></div>
+      <div class="s-body"><div class="scard">
+        <div class="stitle">🏪 ハードウェア導入情報（POSレジ等） <span class="bdg b">インボイス枠</span></div>
+        <div class="sdesc">ハードウェア導入を行いましたか？</div>
+        <div id="s9-yes" class="hidden">
+          <div class="bbox">
+            <div class="bbox-t">「はい」を選択し、以下を添付してください</div>
+            <div class="rrow"><div class="rdot on"><div class="rin"></div></div><b>はい</b></div>
+            <div class="fa"><div class="fi2">5</div><div><div class="fl">納品書欄</div><div class="fn">5_ハードウェア導入情報（納品書）_事業者名</div></div></div>
+            <div class="fa"><div class="fi2" style="background:#059669;">6</div><div><div class="fl">現物写真欄</div><div class="fn">6_ハードウェア導入情報（現物写真）_事業者名</div></div></div>
+          </div>
+        </div>
+        <div id="s9-no" class="hidden">
+          <div class="bbox">
+            <div class="rrow"><div class="rdot on"><div class="rin"></div></div><b>いいえ</b></div>
+            <div class="note i" style="margin-top:6px;"><span class="ni">ℹ️</span><span>「いいえ」を選択するだけでOKです</span></div>
+          </div>
+        </div>
+        <div style="margin-top:7px;"><span class="ubtn p">次へ →</span></div>
+      </div></div>
+    </div>
+    <div class="step">
+      <div class="s-left"><div class="s-circle" id="na">8</div><div class="s-line"></div></div>
+      <div class="s-body"><div class="scard">
+        <div class="stitle">🏦 口座情報の添付</div>
+        <div class="fa"><div class="fi2">7</div><div><div class="fn">7_口座情報_事業者名</div></div></div>
+        <div style="margin-top:7px;"><span class="ubtn p">次へ →</span></div>
+      </div></div>
+    </div>
+    <div class="step">
+      <div class="s-left"><div class="s-circle" id="nb">9</div><div class="s-line"></div></div>
+      <div class="s-body"><div class="scard">
+        <div class="stitle">✏️ 口座情報の入力</div>
+        <div class="sdesc">添付したPDFを開いてから入力します。</div>
+        <div class="bbox">
+          <div class="acct-r">
+            <div class="acct-l">金融機関名</div>
+            <div class="acct-v">①PDFを開く → 下へスクロール → <b style="color:#2563EB;">「検索」ボタン</b>を押す<br>②全角カナで入力 → 余白クリック → 「検索」→ 選択<br><span style="color:#F59E0B;font-size:11px;">⚠️ 文字入力中は「検索」が押せません</span></div>
+          </div>
+          <div class="acct-r">
+            <div class="acct-l">支店名</div>
+            <div class="acct-v">金融機関名と同じ方法で検索・選択してください</div>
+          </div>
+          <div class="acct-r">
+            <div class="acct-l">口座名義（カナ）</div>
+            <div class="acct-v">
+              <div class="note d" style="margin-bottom:7px;"><span class="ni">⚠️</span><span>金融機関登録の名義と<b>完全一致</b>が必要です。スペース・濁点にご注意ください。</span></div>
+              下記ツールで変換後、コピー＆ペーストしてください：<br>
+              <a href="https://tinyurl.com/kouza-kana" target="_blank" style="color:#2563EB;font-weight:700;font-size:13px;">▼ 口座名義変換ツール</a>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:7px;"><span class="ubtn p">次へ →</span></div>
+      </div></div>
+    </div>
+    <div class="step">
+      <div class="s-left"><div class="s-circle g" id="nc">10</div></div>
+      <div class="s-body"><div class="scard">
+        <div class="stitle">✅ 実績報告入力完了</div>
+        <div class="sdesc">補助事業者入力確認画面で内容をご確認後、一番下のボタンを押してください。</div>
+        <span class="ubtn g">実績報告入力完了</span>
+        <div class="comp">
+          <div style="font-size:28px;margin-bottom:7px;">🎉</div>
+          <div class="comp-t">IT導入支援事業者に引き継がれました。</div>
+          <div class="comp-s">この画面が表示されれば①の作業は完了です。<br>弊社での確認後、③の手順をご案内します。</div>
+        </div>
+      </div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ③ タブ -->
+<div class="tc" id="body3">
+  <div class="steps">
+    <div class="step">
+      <div class="s-left"><div class="s-circle">1</div><div class="s-line"></div></div>
+      <div class="s-body"><div class="scard">
+        <div class="stitle">🔐 申請マイページにログイン</div>
+        <div class="urlc">
+          <div class="urlc-l">IT導入補助金 申請マイページ</div>
+          <a class="urll" href="https://portal.shinsei.it-shien.smrj.go.jp/" target="_blank">https://portal.shinsei.it-shien.smrj.go.jp/</a>
+        </div>
+        <div style="margin-top:9px;display:flex;gap:5px;flex-wrap:wrap;align-items:center;">
+          <span class="ubtn gr">申請者メニュー</span>
+          <span style="color:#94A3B8;font-size:15px;">→</span>
+          <span class="ubtn p">実績報告情報編集</span>
+        </div>
+      </div></div>
+    </div>
+    <div class="step">
+      <div class="s-left"><div class="s-circle">2</div><div class="s-line"></div></div>
+      <div class="s-body"><div class="scard">
+        <div class="stitle">🔍 実績報告内容の最終確認</div>
+        <div class="sdesc">添付・入力した内容が一覧で表示されます。全ての情報をご確認ください。</div>
+        <div class="note w"><span class="ni">⚠️</span><span>補助金の金額は必ずご確認ください。修正は「戻る」で対応できます。</span></div>
+        <div style="margin-top:7px;display:flex;gap:5px;flex-wrap:wrap;">
+          <span class="ubtn gr">← 戻る（修正する場合）</span>
+          <span class="ubtn p">次へ →</span>
+        </div>
+      </div></div>
+    </div>
+    <div class="step">
+      <div class="s-left"><div class="s-circle">3</div><div class="s-line"></div></div>
+      <div class="s-body"><div class="scard">
+        <div class="stitle">📱 SMS認証コードの発行・入力</div>
+        <div class="smss"><div class="smsn">1</div>「認証コードを発行する」ボタンを押す</div>
+        <div class="smss"><div class="smsn">2</div>SMSで届いた4桁のコードを入力する</div>
+        <div class="note i"><span class="ni">ℹ️</span><span>認証コードは発行から<b>30分間有効</b>です。30分以内に提出まで完了してください。</span></div>
+        <div style="margin-top:7px;"><span class="ubtn o">認証コードを発行する</span></div>
+      </div></div>
+    </div>
+    <div class="step">
+      <div class="s-left"><div class="s-circle g">4</div></div>
+      <div class="s-body"><div class="scard">
+        <div class="stitle">📤 事務局へ提出</div>
+        <div class="sdesc">認証コードを入力後、「事務局へ提出」ボタンを押してください。</div>
+        <span class="ubtn g">事務局へ提出</span>
+        <div class="comp">
+          <div style="font-size:28px;margin-bottom:7px;">🎉</div>
+          <div class="comp-t">提出が完了しました。</div>
+          <div class="comp-s">この画面が表示されれば完了です。<br>提出後、事務局にて確定検査が行われます。</div>
+        </div>
+        <div class="note w" style="margin-top:9px;"><span class="ni">⚠️</span><span>不備があった場合は事務局から差し戻し連絡が届きます。速やかにご対応ください。</span></div>
+      </div></div>
+    </div>
+  </div>
+</div>
+
+</div>
+<script>
+var S = { waku:'tsujou', kibo:'chuusho', pc:'yes', pos:'no', tab:1 };
+
+function switchTab(n) {
+  S.tab = n;
+  ['tab1','tab3'].forEach(function(id){ document.getElementById(id).classList.remove('on'); });
+  ['body1','body3'].forEach(function(id){ document.getElementById(id).classList.remove('on'); });
+  document.getElementById('tab' + n).classList.add('on');
+  document.getElementById('body' + n).classList.add('on');
+  document.getElementById('fi1').className = 'fi' + (n === 1 ? ' cur' : ' done');
+  document.getElementById('fi3').className = 'fi' + (n === 3 ? ' cur' : '');
+  document.getElementById('g-tab').value = String(n);
+}
+
+function rebuild() {
+  var inv = S.waku === 'invoice';
+  var sho = S.kibo === 'shoukibo';
+  var badge = document.getElementById('kibo-badge');
+  if (inv && sho) {
+    badge.textContent = '小規模事業者';
+    document.getElementById('s6-none').classList.add('hidden');
+    document.getElementById('s6-file').classList.remove('hidden');
+  } else {
+    badge.textContent = inv ? '中小企業' : '通常枠';
+    document.getElementById('s6-none').classList.remove('hidden');
+    document.getElementById('s6-file').classList.add('hidden');
+  }
+  document.getElementById('s8').classList.toggle('hidden', !inv);
+  document.getElementById('s9').classList.toggle('hidden', !inv);
+  if (inv) {
+    document.getElementById('s8-yes').classList.toggle('hidden', S.pc !== 'yes');
+    document.getElementById('s8-no').classList.toggle('hidden',  S.pc !== 'no');
+    document.getElementById('s9-yes').classList.toggle('hidden', S.pos !== 'yes');
+    document.getElementById('s9-no').classList.toggle('hidden',  S.pos !== 'no');
+  }
+  var off = inv ? 2 : 0;
+  document.getElementById('na').textContent = 8  + off;
+  document.getElementById('nb').textContent = 9  + off;
+  document.getElementById('nc').textContent = 10 + off;
+}
+
+function gen() {
+  S.waku = document.getElementById('g-waku').value;
+  S.kibo = document.getElementById('g-kibo').value;
+  S.pc   = document.getElementById('g-pc').value;
+  S.pos  = document.getElementById('g-pos').value;
+  S.tab  = parseInt(document.getElementById('g-tab').value);
+  var inv = S.waku === 'invoice';
+  ['g-sep','g-row-kibo','g-row-pc','g-row-pos'].forEach(function(id){
+    document.getElementById(id).classList.toggle('hidden', !inv);
+  });
+  rebuild();
+  switchTab(S.tab);
+}
+
+gen();
+</script>
+</div>

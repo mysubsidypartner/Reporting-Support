@@ -338,18 +338,32 @@ h1{
   letter-spacing:.02em;max-width:var(--measure);
 }
 .body{max-width:var(--measure)}
+.body:has(.gsite-embed){max-width:52em}
 .body>*:first-child{margin-top:0}
 .lead{
   font-size:15.5px;color:var(--ink-mid);line-height:1.95;margin:0 0 38px;
+}
+.lead-strong{
+  font-size:18px;font-weight:700;color:var(--ink);line-height:1.7;margin:0 0 12px;
 }
 h2{
   margin:56px 0 18px;font-size:17.5px;font-weight:700;letter-spacing:.03em;
   line-height:1.6;display:flex;align-items:center;gap:10px;
 }
-h2::before{
+.body>h2::before{
   content:"";width:7px;height:7px;border-radius:50%;
   background:var(--leaf);flex:none;
 }
+.gsite-embed{
+  margin:0 0 40px;padding:8px 0;
+}
+.gsite-embed > div[style]{
+  max-width:100%!important;margin:0!important;
+  background:var(--panel)!important;border:1px solid var(--rule);
+  border-radius:var(--r);overflow:auto;
+}
+.gsite-embed table{font-size:13px}
+.gsite-embed img{max-width:100%;height:auto}
 h3{margin:32px 0 10px;font-size:15px;font-weight:700;letter-spacing:.02em}
 p{margin:0 0 20px}
 ul,ol{padding-left:1.35em;margin:0 0 22px}
