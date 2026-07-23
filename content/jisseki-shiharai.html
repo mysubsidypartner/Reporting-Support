@@ -1,23 +1,14 @@
-<div class="gsite-embed">
-<div style="max-width: 900px; margin: 0 auto; padding: 36px 28px; font-family: 'Lato', sans-serif; background: #f9f9f9; border-radius: 10px;">
+<p class="lead">補助事業者がIT導入支援事業者へ支払いを行ったことを示す書類を提出してください。</p>
 
-  <h2 style="font-size: 30px; font-weight: bold; color: #0b5394; margin-bottom: 20px;">
-    🧾 支払証憑の提出について
-  </h2>
+<div class="callout">
+  <strong>提出時の注意</strong>
+  <p>通帳取引ページ（入出金明細照会）に複数の取引がある場合は、該当取引以外を黒塗りして提出してください。</p>
+</div>
 
-  <!-- 注意ボックス -->
-  <div style="background: #fff4f4; border-left: 6px solid #e53935; padding: 20px 24px; font-size: 17px; color: #333; line-height: 1.8; margin-bottom: 20px; border-radius: 8px;">
-    <p style="margin: 0 0 8px; font-weight: bold; color: #e53935;">⚠️ ご提出時の注意事項</p>
-    <p style="margin: 0;">
-      提出いただく通帳取引ページ（入出金明細照会）に複数の取引が記載されている場合は、<br>
-      <span style="font-weight: bold;">該当取引以外の箇所を黒塗りしたうえでご提出ください。</span>
-    </p>
-  </div>
-
-  <!-- 見本①: 通帳 -->
-  <div style="margin-bottom: 6px; font-size: 13px; font-weight: bold; color: #555;">▼ 黒塗り見本①（通帳記帳ページ）</div>
-  <div style="background: white; border: 1.5px solid #ccc; border-radius: 10px; padding: 16px; margin-bottom: 20px;">
-    <svg width="100%" viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg">
+<h2>黒塗り見本</h2>
+<div class="sample-label">黒塗り見本①（通帳記帳ページ）</div>
+<div class="sample-box">
+<svg width="100%" viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg">
       <rect x="8" y="8" width="664" height="304" rx="8" fill="white" stroke="#aaa" stroke-width="1"/>
       <rect x="14" y="36" width="8" height="8" fill="#4caf50"/>
       <rect x="14" y="48" width="8" height="4" fill="#4caf50"/>
@@ -58,140 +49,73 @@
       <rect x="8" y="304" width="664" height="8" fill="white"/>
       <rect x="8" y="8" width="664" height="304" rx="8" fill="none" stroke="#888" stroke-width="1.5"/>
     </svg>
-  </div>
-
-  <!-- 見本②: 入出金明細 -->
-  <div style="margin-bottom: 6px; font-size: 13px; font-weight: bold; color: #555;">▼ 黒塗り見本②（入出金明細照会）</div>
-  <div style="background: white; border: 1.5px solid #ccc; border-radius: 8px; padding: 16px; margin-bottom: 28px; font-family: sans-serif; font-size: 13px; color: #111;">
-    <div style="margin-bottom: 8px;">
-      <div style="font-weight: 700; margin-bottom: 4px;">■照会結果</div>
-      <div style="display: flex; gap: 32px; flex-wrap: wrap; margin-bottom: 2px;">
-        <span><strong>出金合計件数</strong>　16件</span>
-        <span><strong>入金合計件数</strong>　1件</span>
-      </div>
-      <div style="display: flex; gap: 32px; flex-wrap: wrap; align-items: center;">
-        <span><strong>出金合計金額</strong>　<span style="background:#1a1a1a; color:#1a1a1a; border-radius:2px; padding:0 32px;">　</span>円</span>
-        <span><strong>入金合計金額</strong>　<span style="background:#1a1a1a; color:#1a1a1a; border-radius:2px; padding:0 24px;">　</span>円</span>
-        <span><strong>残高金額</strong>　<span style="background:#1a1a1a; color:#1a1a1a; border-radius:2px; padding:0 32px;">　</span>円</span>
-      </div>
-    </div>
-    <table style="width:100%; border-collapse: collapse; font-size: 12px; table-layout: fixed;">
-      <colgroup>
-        <col style="width:5%"/><col style="width:14%"/><col style="width:13%"/>
-        <col style="width:13%"/><col style="width:12%"/><col style="width:8%"/>
-        <col style="width:13%"/><col style="width:22%"/>
-      </colgroup>
-      <thead>
-        <tr style="background:#ddd; text-align:center;">
-          <th style="border:1px solid #999; padding:5px 2px;">番号</th>
-          <th style="border:1px solid #999; padding:5px 2px;">勘定日<br>（起算日）</th>
-          <th style="border:1px solid #999; padding:5px 2px;">出金金額（円）</th>
-          <th style="border:1px solid #999; padding:5px 2px;">入金金額（円）</th>
-          <th style="border:1px solid #999; padding:5px 2px;">残高（円）</th>
-          <th style="border:1px solid #999; padding:5px 2px;">取引区分</th>
-          <th style="border:1px solid #999; padding:5px 2px;">金融機関名<br>／支店名</th>
-          <th style="border:1px solid #999; padding:5px 2px;">摘要</th>
-        </tr>
-      </thead>
-      <tbody id="rows2"></tbody>
-    </table>
-  </div>
-
-  <!-- 説明 -->
-  <p style="font-size: 18px; color: #333; line-height: 1.9;">
-    補助事業者がIT導入支援事業者へ支払いを行ったことを示す書類を提出してください。
-  </p>
-
-  <!-- 必要な情報 -->
-  <div style="background: #e8f0fa; border-left: 6px solid #0b5394; padding: 20px 24px; font-size: 17px; color: #333; line-height: 1.8; margin-bottom: 36px;">
-    <p style="margin: 0 0 12px; font-weight: bold; color: #0b5394;">▼ 支払証憑に必要な情報：</p>
-    <p>① 金融機関名</p>
-    <p>② 振込日</p>
-    <p>③ 振込元情報</p>
-    <p>④ 振込先情報</p>
-    <p>⑤ 振込金額</p>
-    <p>⑥ 振込が完了していること</p>
-    <p>⑦ 口座から口座へ振込を行っていること</p>
-  </div>
-
-  <!-- 組み合わせ例 -->
-  <p style="font-size: 18px; color: #333; line-height: 1.9;">下記のような書類の組み合わせが認められています。</p>
-  <div style="background: #e8f0fa; border-left: 6px solid #0b5394; padding: 20px 24px; font-size: 17px; color: #333; line-height: 1.8; margin-bottom: 36px;">
-    <p style="margin: 0 0 8px; font-weight: bold; color: #0b5394;">▼支払証憑の組み合わせ例：</p>
-    <ul style="margin: 0; padding-left: 1.2em;">
-      <li>ATM利用明細書 ＋ 通帳表紙 ＋ 通帳記帳ページ</li>
-      <li>窓口振込時の振込依頼書 ＋ 通帳表紙 ＋ 通帳記帳ページ</li>
-      <li>ネットバンクの振込照会ページ ＋ 入出金履歴 ＋ 基本口座情報</li>
-      <li><span style="color: #e53935;">※当座預金の場合は「総合振込明細 + 当座勘定照合表」が必要です</span></li>
-    </ul>
-  </div>
-
-  <!-- マニュアル -->
-  <div style="background:#f5f8fc; border-left:6px solid #0b5394; padding:20px 24px; border-radius:8px;">
-    <p style="font-size:17px; color:#333; line-height:1.8; margin:0 0 10px;">
-      📘 下記の資料は、IT導入補助金2025 事務局が公開している公式マニュアルです。<br>
-      提出書類の確認や不備防止にご活用ください。
-    </p>
-    <div style="text-align:center; margin:12px 0;">
-      <a href="https://app-na2.hubspotdocuments.com/documents/47272255/view/1277235740?accessId=c880b8" target="_blank" rel="noopener"
-         style="display:inline-block; background:white; color:#0b5394; border:2px solid #0b5394; border-radius:8px; padding:14px 28px; font-weight:bold; text-decoration:none;">
-        📄 マニュアルを開く（公式サイトへ）
-      </a>
-    </div>
-  </div>
-
 </div>
 
+<div class="sample-label">黒塗り見本②（入出金明細照会）</div>
+<div class="sample-box sample-bank">
+  <div class="sample-meta">
+    <div class="sample-meta-title">照会結果</div>
+    <div class="sample-meta-row"><span>出金合計件数　16件</span><span>入金合計件数　1件</span></div>
+    <div class="sample-meta-row"><span>出金合計金額　<span class="redact">　　</span>円</span><span>入金合計金額　<span class="redact">　　</span>円</span><span>残高金額　<span class="redact">　　</span>円</span></div>
+  </div>
+  <table class="sample-table">
+    <thead>
+      <tr>
+        <th>番号</th><th>勘定日</th><th>出金金額</th><th>入金金額</th>
+        <th>残高</th><th>取引区分</th><th>金融機関名／支店名</th><th>摘要</th>
+      </tr>
+    </thead>
+    <tbody id="rows2"></tbody>
+  </table>
+</div>
 <script>
-  const tbody = document.getElementById('rows2');
-  const BLACK = '#1a1a1a';
-  for (let i = 1; i <= 17; i++) {
-    const num = String(i).padStart(3, '0');
-    const tr = document.createElement('tr');
+(function(){
+  var tbody = document.getElementById('rows2');
+  if(!tbody) return;
+  for (var i = 1; i <= 17; i++) {
+    var num = String(i).padStart(3, '0');
+    var tr = document.createElement('tr');
     if (i === 16) {
-      tr.innerHTML = `
-        <td style="border:1px solid #bbb; padding:5px 4px; text-align:center;">${num}</td>
-        <td style="border:1px solid #bbb; padding:5px 4px; text-align:center;">2026年03月25日</td>
-        <td style="border:1px solid #bbb; padding:5px 4px; text-align:right;">3,000,000</td>
-        <td style="border:1px solid #bbb; padding:5px 4px;"></td>
-        <td style="border:1px solid #bbb; padding:5px 4px; background:${BLACK};"></td>
-        <td style="border:1px solid #bbb; padding:5px 4px; text-align:center;">出金</td>
-        <td style="border:1px solid #bbb; padding:5px 4px;"></td>
-        <td style="border:1px solid #bbb; padding:5px 4px;">ITツール導入費用</td>
-      `;
+      tr.innerHTML = '<td>'+num+'</td><td>2026年03月25日</td><td class="num">3,000,000</td><td></td><td class="redacted"></td><td>出金</td><td></td><td>ITツール導入費用</td>';
     } else {
-      tr.innerHTML = `
-        <td style="border:1px solid #bbb; padding:5px 4px; background:${BLACK};"></td>
-        <td style="border:1px solid #bbb; padding:5px 4px; background:${BLACK};"></td>
-        <td style="border:1px solid #bbb; padding:5px 4px; background:${BLACK};"></td>
-        <td style="border:1px solid #bbb; padding:5px 4px; background:${BLACK};"></td>
-        <td style="border:1px solid #bbb; padding:5px 4px; background:${BLACK};"></td>
-        <td style="border:1px solid #bbb; padding:5px 4px; background:${BLACK};"></td>
-        <td style="border:1px solid #bbb; padding:5px 4px; background:${BLACK};"></td>
-        <td style="border:1px solid #bbb; padding:5px 4px; background:${BLACK};"></td>
-      `;
+      tr.innerHTML = '<td class="redacted"></td><td class="redacted"></td><td class="redacted"></td><td class="redacted"></td><td class="redacted"></td><td class="redacted"></td><td class="redacted"></td><td class="redacted"></td>';
     }
     tbody.appendChild(tr);
   }
+})();
 </script>
+
+<h2>必要な情報</h2>
+<ol class="checks numbered">
+  <li>金融機関名</li>
+  <li>振込日</li>
+  <li>振込元情報</li>
+  <li>振込先情報</li>
+  <li>振込金額</li>
+  <li>振込が完了していること</li>
+  <li>口座から口座へ振込を行っていること</li>
+</ol>
+
+<h2>認められる書類の組み合わせ例</h2>
+<ul class="checks">
+  <li>ATM利用明細書 ＋ 通帳表紙 ＋ 通帳記帳ページ</li>
+  <li>窓口振込時の振込依頼書 ＋ 通帳表紙 ＋ 通帳記帳ページ</li>
+  <li>ネットバンクの振込照会ページ ＋ 入出金履歴 ＋ 基本口座情報</li>
+</ul>
+
+<div class="callout">
+  <strong>当座預金の場合</strong>
+  <p>「総合振込明細 ＋ 当座勘定照合表」が必要です。</p>
 </div>
 
-<div class="gsite-embed">
-<div style="background: #fff3cd; border-left: 8px solid #f39c12; padding: 20px 24px; font-size: 18px; line-height: 1.8; color: #000; margin: 36px auto; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); max-width: 900px; display: flex; align-items: flex-start; gap: 16px;">
-  <div style="font-size: 32px; color: #e74c3c;">⚠️</div>
-  <div>
-    <p style="margin: 0 0 10px; font-weight: bold; font-size: 20px;">注意事項</p>
-    <p style="margin: 0 0 10px;">
-      <span style="color: red; font-weight: bold; text-decoration: underline;">
-        銀行振込での振込が完了した時点で必要な証憑を必ず保管してください。
-      </span>
-    </p>
-    <p style="margin: 0 0 10px;">
-      特にインターネットバンキングを利用する場合は、取引明細照会期間を過ぎると証憑の出力ができないことがあります。
-    </p>
-    <p style="margin: 0;">
-      なお、提出いただく通帳取引ページに複数の取引が記載されている場合は、<span style="font-weight: bold;">該当取引以外の箇所を黒塗り</span>したうえでご提出ください。
-    </p>
-  </div>
+<div class="callout">
+  <strong>保管について</strong>
+  <p>銀行振込が完了した時点で、必要な証憑を必ず保管してください。</p>
+  <p>インターネットバンキングでは、取引明細照会期間を過ぎると証憑を出力できないことがあります。</p>
 </div>
+
+<div class="note-box">
+  <strong>公式マニュアル</strong>
+  <p>IT導入補助金2025 事務局が公開している資料です。提出書類の確認や不備防止にご活用ください。</p>
+  <p><a class="btn btn-external" href="https://app-na2.hubspotdocuments.com/documents/47272255/view/1277235740?accessId=c880b8" target="_blank" rel="noopener">公式マニュアルを開く</a></p>
 </div>
