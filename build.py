@@ -417,6 +417,60 @@ figcaption{font-size:12px;color:var(--ink-light);margin-top:6px}
 .gsite-embed{margin:0 0 20px}
 .gsite-embed > div[style]{max-width:100%!important;margin:0!important;padding:0!important;background:transparent!important;font-family:inherit!important}
 
+
+/* ----- 入力手順ガイド ----- */
+.cond-bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 20px;padding:12px 14px;background:var(--brand-soft);border:1px solid #c9dceb}
+.cond-label{font-size:12px;font-weight:700;color:var(--brand);margin-right:4px}
+.cond-chip{display:inline-block;font-size:12px;font-weight:600;color:var(--ink);background:#fff;border:1px solid var(--rule);padding:3px 10px}
+
+.phase-flow{list-style:none;margin:0 0 22px;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.phase-flow-item{display:flex;align-items:center;gap:10px;padding:12px 12px;border:1px solid var(--rule);background:var(--bg)}
+.phase-flow-item>span{flex:none;width:28px;height:28px;display:grid;place-items:center;font-size:12px;font-weight:700;background:var(--brand);color:#fff}
+.phase-flow-item.is-us>span{background:#64748b}
+.phase-flow-item strong{display:block;font-size:13px}
+.phase-flow-item small{display:block;font-size:11.5px;color:var(--ink-light)}
+
+.guide-tabs{display:flex;gap:0;margin:0 0 18px;border:1px solid var(--rule)}
+.guide-tab{flex:1;appearance:none;border:0;border-right:1px solid var(--rule);background:var(--bg);color:var(--ink-mid);font:inherit;font-size:13.5px;font-weight:700;padding:12px 10px;cursor:pointer}
+.guide-tab:last-child{border-right:0}
+.guide-tab.is-active{background:var(--brand);color:#fff}
+.guide-tab:hover:not(.is-active){background:var(--brand-soft);color:var(--brand)}
+.guide-panel[hidden]{display:none!important}
+
+.guide-steps{list-style:none;margin:0;padding:0;border:1px solid var(--rule)}
+.guide-step{position:relative;display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px;margin:0;padding:16px 16px 16px 12px;border-bottom:1px solid var(--rule);background:#fff}
+.guide-step:last-child,.guide-step.last{border-bottom:none}
+.guide-num{width:28px;height:28px;margin-top:1px;display:grid;place-items:center;background:var(--brand);color:#fff;font-size:12px;font-weight:700;line-height:1}
+.guide-body h3{margin:2px 0 8px;font-size:15px}
+.guide-body>p{margin:0 0 10px;font-size:14px;color:var(--ink-mid)}
+.guide-body .note-box,.guide-body .callout,.guide-body table{margin-top:10px;margin-bottom:10px}
+
+.ui-path{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:0 0 8px}
+.ui-path-item{display:inline-block;padding:5px 10px;border:1px solid var(--rule);background:var(--bg);font-size:12.5px;font-weight:600;color:var(--ink-mid)}
+.ui-path-item.primary{background:var(--brand-soft);border-color:#b7cee4;color:var(--brand)}
+.ui-path-sep{color:var(--ink-light);font-size:12px}
+
+.ui-btn{display:inline-flex;align-items:center;padding:7px 12px;margin:0 4px 4px 0;border:1px solid var(--brand);background:var(--brand);color:#fff;font-size:12.5px;font-weight:700}
+.ui-btn.ghost{background:#fff;color:var(--ink-mid);border-color:var(--rule)}
+.ui-btn.accent{background:#c2410c;border-color:#c2410c}
+.ui-btn.success{background:#0f766e;border-color:#0f766e}
+
+.file-chip{display:flex;align-items:flex-start;gap:10px;margin:0 0 8px;padding:10px 12px;border:1px solid var(--rule);background:var(--bg)}
+.file-num{flex:none;width:22px;height:22px;display:grid;place-items:center;background:var(--brand);color:#fff;font-size:11px;font-weight:700}
+.file-name{font-size:13.5px;font-weight:700;color:var(--ink);word-break:break-all}
+.file-sub{font-size:12px;color:var(--ink-light);margin-top:2px}
+
+.choice-list{display:grid;gap:6px;margin:0 0 10px}
+.choice{padding:10px 12px;border:1px solid var(--rule);background:#fff;font-size:13.5px;color:var(--ink-light)}
+.choice.on{border-color:var(--brand);background:var(--brand-soft);color:var(--ink);font-weight:700}
+.choice-tag{margin-left:8px;font-size:11.5px;font-weight:700;color:var(--brand)}
+.choice.off{opacity:.7}
+
+@media (max-width:700px){
+  .phase-flow{grid-template-columns:1fr}
+  .guide-step{grid-template-columns:32px minmax(0,1fr);padding:14px 12px}
+}
+
 @media (max-width:900px){
   .masthead-inner{padding:0 16px;height:52px}
   .shell{grid-template-columns:1fr;gap:0;padding:16px 16px 48px}
@@ -453,6 +507,19 @@ JS = """(function(){
       if(rel.indexOf('noreferrer')===-1)rel.push('noreferrer');
       a.setAttribute('rel',rel.join(' '));
     }
+  });
+
+  // 入力手順タブ
+  document.querySelectorAll('[data-guide-tab]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var id=btn.getAttribute('data-guide-tab');
+      var root=btn.closest('.body')||document;
+      root.querySelectorAll('[data-guide-tab]').forEach(function(b){b.classList.toggle('is-active',b===btn)});
+      root.querySelectorAll('.guide-panel').forEach(function(p){
+        var show=p.id==='guide-panel-'+id;
+        if(show)p.removeAttribute('hidden'); else p.setAttribute('hidden','');
+      });
+    });
   });
 })();
 """

@@ -1,146 +1,241 @@
-<div class="gsite-embed">
-<div class="wrap">
-<div class="hdr"><h1>📋 実績報告 手順ガイド</h1><p>IT導入補助金 | 申請マイページでの操作手順</p></div>
-<div class="flow-bar">
-<div class="fi" id="fi1"><span class="fi-n">①</span><div>貴社作業<br>添付作業</div></div>
-<div class="fi done"><span class="fi-n">②</span><div>弊社作業<br>内容確認</div></div>
-<div class="fi" id="fi3"><span class="fi-n">③</span><div>貴社作業<br>事務局提出</div></div>
+<p class="lead">申請マイページでの操作手順です。画面の表示に沿って、上から順に進めてください。</p>
+
+<div class="cond-bar">
+  <span class="cond-label">このページの対象</span>
+  <span class="cond-chip">インボイス枠</span><span class="cond-chip">小規模事業者</span><span class="cond-chip">PCなし</span><span class="cond-chip">POSあり</span>
 </div>
-<div class="tab-btns">
-<button class="tbtn" id="tab1" onclick="swt(1)"><span class="tn">①</span><span>貴社作業</span><span class="ts">添付・送信</span></button>
-<button class="tbtn" id="tab3" onclick="swt(3)"><span class="tn">③</span><span>貴社作業</span><span class="ts">事務局へ提出</span></button>
+
+
+<ol class="phase-flow">
+  <li class="phase-flow-item is-you"><span>①</span><div><strong>貴社</strong><small>添付・送信</small></div></li>
+  <li class="phase-flow-item is-us"><span>②</span><div><strong>弊社</strong><small>内容確認</small></div></li>
+  <li class="phase-flow-item is-you"><span>③</span><div><strong>貴社</strong><small>事務局へ提出</small></div></li>
+</ol>
+
+<div class="guide-tabs" role="tablist">
+  <button type="button" class="guide-tab is-active" data-guide-tab="1" role="tab">① 添付・送信</button>
+  <button type="button" class="guide-tab" data-guide-tab="3" role="tab">③ 事務局へ提出</button>
 </div>
-<div class="tc" id="body1"><div class="steps">
-<div class="step"><div class="sl"><div class="sc">1</div><div class="sl-ln"></div></div><div class="sb"><div class="scard">
-<div class="st">🔐 申請マイページにログイン</div>
-<div class="urlc"><div class="urlc-l">IT導入補助金 申請マイページ</div><a class="urll" href="https://portal.shinsei.it-shien.smrj.go.jp/" target="_blank">https://portal.shinsei.it-shien.smrj.go.jp/</a></div>
-<div style="margin-top:8px;display:flex;gap:5px;flex-wrap:wrap;align-items:center;"><span class="ubtn gr">申請者メニュー</span><span style="color:#94A3B8;font-size:14px;">→</span><span class="ubtn p">実績報告情報編集</span></div>
-</div></div></div>
-<div class="step"><div class="sl"><div class="sc">2</div><div class="sl-ln"></div></div><div class="sb"><div class="scard">
-<div class="st">📄 実績報告の説明画面</div>
-<div class="sd">説明書きが表示されます。そのまま下へスクロールして「次へ」を押してください。</div>
-<span class="ubtn p">次へ →</span>
-</div></div></div>
-<div class="step"><div class="sl"><div class="sc">3</div><div class="sl-ln"></div></div><div class="sb"><div class="scard">
-<div class="st">📎 請求書の添付</div>
-<div class="fa"><div class="fi2">1</div><div><div class="fn">1_請求明細書_事業者名</div></div></div>
-<div style="margin-top:6px;"><span class="ubtn p">次へ →</span></div>
-</div></div></div>
-<div class="step"><div class="sl"><div class="sc">4</div><div class="sl-ln"></div></div><div class="sb"><div class="scard">
-<div class="st">🏦 支払方法の選択</div>
-<div class="sd">「銀行振込」を選択してください。</div>
-<div class="bbox"><div class="rrow"><div class="rdot on"><div class="rin"></div></div><b>銀行振込</b><span style="color:#2563EB;font-size:10px;margin-left:4px;">← こちらを選択</span></div><div class="rrow"><div class="rdot"></div><span style="color:#94A3B8;">クレジットカード払い</span></div></div>
-<div style="margin-top:6px;"><span class="ubtn p">次へ →</span></div>
-</div></div></div>
-<div class="step"><div class="sl"><div class="sc">5</div><div class="sl-ln"></div></div><div class="sb"><div class="scard">
-<div class="st">💳 支払証憑の添付</div>
-<div class="fa"><div class="fi2">2</div><div><div class="fn">2_支払証憑_事業者名</div></div></div>
-<div style="margin-top:6px;"><span class="ubtn p">次へ →</span></div>
-</div></div></div>
-<div class="step"><div class="sl"><div class="sc">6</div><div class="sl-ln"></div></div><div class="sb"><div class="scard">
-<div class="st">📁 その他資料添付 <span id="kibo-badge" class="bdg a"></span></div>
-<div id="s6-none"><div class="sd">この画面での添付書類はございません。</div><div class="note i"><span class="ni">ℹ️</span><span>添付不要 — そのまま「次へ」を押してください</span></div></div>
-<div id="s6-file" class="hidden"><div class="sd">下記ファイルを添付してください。</div><div class="fa"><div class="fi2">3</div><div><div class="fn">3_従業員一覧_事業者名</div></div></div></div>
-<div style="margin-top:6px;"><span class="ubtn p">次へ →</span></div>
-</div></div></div>
-<div class="step"><div class="sl"><div class="sc">7</div><div class="sl-ln"></div></div><div class="sb"><div class="scard">
-<div class="st">💻 ソフトウェア証憑の添付</div>
-<div class="fa"><div class="fi2">4</div><div><div class="fn">4_ソフトウェア証憑_事業者名</div></div></div>
-<div style="margin-top:6px;"><span class="ubtn p">次へ →</span></div>
-</div></div></div>
-<div id="s8" class="step hidden"><div class="sl"><div class="sc" id="n8">8</div><div class="sl-ln"></div></div><div class="sb"><div class="scard">
-<div class="st">🖥️ ハードウェア導入情報（PC・タブレット等） <span class="bdg b">インボイス枠</span></div>
-<div class="sd">ハードウェア導入を行いましたか？</div>
-<div id="s8-yes" class="hidden"><div class="bbox"><div class="bbox-t">「はい」を選択し、以下を添付してください</div><div class="rrow"><div class="rdot on"><div class="rin"></div></div><b>はい</b></div><div class="fa"><div class="fi2">5</div><div><div class="fl">納品書欄</div><div class="fn">5_ハードウェア導入情報（納品書）_事業者名</div></div></div><div class="fa"><div class="fi2" style="background:#059669;">6</div><div><div class="fl">現物写真欄</div><div class="fn">6_ハードウェア導入情報（現物写真）_事業者名</div></div></div></div></div>
-<div id="s8-no" class="hidden"><div class="bbox"><div class="rrow"><div class="rdot on"><div class="rin"></div></div><b>いいえ</b></div><div class="note i" style="margin-top:5px;"><span class="ni">ℹ️</span><span>「いいえ」を選択するだけでOKです</span></div></div></div>
-<div style="margin-top:6px;"><span class="ubtn p">次へ →</span></div>
-</div></div></div>
-<div id="s9" class="step hidden"><div class="sl"><div class="sc" id="n9">9</div><div class="sl-ln"></div></div><div class="sb"><div class="scard">
-<div class="st">🏪 ハードウェア導入情報（POSレジ等） <span class="bdg b">インボイス枠</span></div>
-<div class="sd">ハードウェア導入を行いましたか？</div>
-<div id="s9-yes" class="hidden"><div class="bbox"><div class="bbox-t">「はい」を選択し、以下を添付してください</div><div class="rrow"><div class="rdot on"><div class="rin"></div></div><b>はい</b></div><div class="fa"><div class="fi2">5</div><div><div class="fl">納品書欄</div><div class="fn">5_ハードウェア導入情報（納品書）_事業者名</div></div></div><div class="fa"><div class="fi2" style="background:#059669;">6</div><div><div class="fl">現物写真欄</div><div class="fn">6_ハードウェア導入情報（現物写真）_事業者名</div></div></div></div></div>
-<div id="s9-no" class="hidden"><div class="bbox"><div class="rrow"><div class="rdot on"><div class="rin"></div></div><b>いいえ</b></div><div class="note i" style="margin-top:5px;"><span class="ni">ℹ️</span><span>「いいえ」を選択するだけでOKです</span></div></div></div>
-<div style="margin-top:6px;"><span class="ubtn p">次へ →</span></div>
-</div></div></div>
-<div class="step"><div class="sl"><div class="sc" id="na">8</div><div class="sl-ln"></div></div><div class="sb"><div class="scard">
-<div class="st">🏦 口座情報の添付</div>
-<div class="fa"><div class="fi2">7</div><div><div class="fn">7_口座情報_事業者名</div></div></div>
-<div style="margin-top:6px;"><span class="ubtn p">次へ →</span></div>
-</div></div></div>
-<div class="step"><div class="sl"><div class="sc" id="nb">9</div><div class="sl-ln"></div></div><div class="sb"><div class="scard">
-<div class="st">✏️ 口座情報の入力</div>
-<div class="sd">添付したPDFを開いてから入力します。</div>
-<div class="bbox">
-<div class="acct-r"><div class="acct-l">金融機関名</div><div class="acct-v">①PDFを開く → 下へスクロール → <b style="color:#2563EB;">「検索」ボタン</b>を押す<br>②全角カナで入力 → 余白クリック → 「検索」→ 選択<br><span style="color:#F59E0B;font-size:10px;">⚠️ 文字入力中は「検索」が押せません</span></div></div>
-<div class="acct-r"><div class="acct-l">支店名</div><div class="acct-v">金融機関名と同じ方法で検索・選択</div></div>
-<div class="acct-r"><div class="acct-l">口座名義（カナ）</div><div class="acct-v"><div class="note d" style="margin-bottom:6px;"><span class="ni">⚠️</span><span>金融機関登録の名義と<b>完全一致</b>が必要です。スペース・濁点に特にご注意ください。</span></div>下記ツールで変換後、コピー＆ペーストしてください：<br><a href="https://tinyurl.com/kouza-kana" target="_blank" style="color:#2563EB;font-weight:700;">▼ 口座名義変換ツール</a></div></div>
+
+<section class="guide-panel" id="guide-panel-1">
+  <ol class="guide-steps">
+<li class="guide-step">
+  <span class="guide-num">1</span>
+  <div class="guide-body">
+    <h3>申請マイページにログインする</h3>
+    
+<p><a class="btn btn-external" href="https://portal.shinsei.it-shien.smrj.go.jp/" target="_blank" rel="noopener">申請マイページを開く</a></p>
+<div class="ui-path"><span class="ui-path-item">申請者メニュー</span><span class="ui-path-sep">→</span><span class="ui-path-item primary">実績報告情報編集</span></div>
+
+  </div>
+</li>
+<li class="guide-step">
+  <span class="guide-num">2</span>
+  <div class="guide-body">
+    <h3>説明画面を確認する</h3>
+    
+<p>説明が表示されます。内容を確認し、下へスクロールして進みます。</p>
+<p><span class="ui-btn">次へ</span></p>
+
+  </div>
+</li>
+<li class="guide-step">
+  <span class="guide-num">3</span>
+  <div class="guide-body">
+    <h3>請求書を添付する</h3>
+    
+<div class="file-chip">
+  <span class="file-num">1</span>
+  <div><div class="file-name">1_請求明細書_事業者名</div></div>
 </div>
-<div style="margin-top:6px;"><span class="ubtn p">次へ →</span></div>
-</div></div></div>
-<div class="step"><div class="sl"><div class="sc g" id="nc">10</div></div><div class="sb"><div class="scard">
-<div class="st">✅ 実績報告入力完了</div>
-<div class="sd">補助事業者入力確認画面で内容をご確認後、一番下のボタンを押してください。</div>
-<span class="ubtn g">実績報告入力完了</span>
-<div class="comp"><div style="font-size:26px;margin-bottom:6px;">🎉</div><div class="comp-t">IT導入支援事業者に引き継がれました。</div><div class="comp-s">この画面が表示されれば①の作業は完了です。<br>弊社での確認後、③の手順をご案内します。</div></div>
-</div></div></div>
-</div></div>
-<div class="tc" id="body3"><div class="steps">
-<div class="step"><div class="sl"><div class="sc">1</div><div class="sl-ln"></div></div><div class="sb"><div class="scard">
-<div class="st">🔐 申請マイページにログイン</div>
-<div class="urlc"><div class="urlc-l">IT導入補助金 申請マイページ</div><a class="urll" href="https://portal.shinsei.it-shien.smrj.go.jp/" target="_blank">https://portal.shinsei.it-shien.smrj.go.jp/</a></div>
-<div style="margin-top:8px;display:flex;gap:5px;flex-wrap:wrap;align-items:center;"><span class="ubtn gr">申請者メニュー</span><span style="color:#94A3B8;font-size:14px;">→</span><span class="ubtn p">実績報告情報編集</span></div>
-</div></div></div>
-<div class="step"><div class="sl"><div class="sc">2</div><div class="sl-ln"></div></div><div class="sb"><div class="scard">
-<div class="st">🔍 実績報告内容の最終確認</div>
-<div class="sd">添付・入力した内容が一覧で表示されます。全ての情報をご確認ください。</div>
-<div class="note w"><span class="ni">⚠️</span><span>補助金の金額は必ずご確認ください。修正は「戻る」で対応できます。</span></div>
-<div style="margin-top:7px;display:flex;gap:5px;flex-wrap:wrap;"><span class="ubtn gr">← 戻る</span><span class="ubtn p">次へ →</span></div>
-</div></div></div>
-<div class="step"><div class="sl"><div class="sc">3</div><div class="sl-ln"></div></div><div class="sb"><div class="scard">
-<div class="st">📱 SMS認証コードの発行・入力</div>
-<div class="smss"><div class="smsn">1</div>「認証コードを発行する」ボタンを押す</div>
-<div class="smss"><div class="smsn">2</div>SMSで届いた4桁のコードを入力する</div>
-<div class="note i"><span class="ni">ℹ️</span><span>認証コードは発行から<b>30分間有効</b>です。30分以内に提出まで完了してください。</span></div>
-<div style="margin-top:7px;"><span class="ubtn o">認証コードを発行する</span></div>
-</div></div></div>
-<div class="step"><div class="sl"><div class="sc g">4</div></div><div class="sb"><div class="scard">
-<div class="st">📤 事務局へ提出</div>
-<div class="sd">認証コードを入力後、「事務局へ提出」ボタンを押してください。</div>
-<span class="ubtn g">事務局へ提出</span>
-<div class="comp"><div style="font-size:26px;margin-bottom:6px;">🎉</div><div class="comp-t">提出が完了しました。</div><div class="comp-s">この画面が表示されれば完了です。<br>提出後、事務局にて確定検査が行われます。</div></div>
-<div class="note w" style="margin-top:8px;"><span class="ni">⚠️</span><span>不備があった場合は事務局から差し戻し連絡が届きます。速やかにご対応ください。</span></div>
-</div></div></div>
-</div></div>
+<p><span class="ui-btn">次へ</span></p>
+
+  </div>
+</li>
+<li class="guide-step">
+  <span class="guide-num">4</span>
+  <div class="guide-body">
+    <h3>支払方法を選択する</h3>
+    
+<p>「銀行振込」を選択してください。</p>
+<div class="choice-list">
+  <div class="choice on">銀行振込 <span class="choice-tag">こちらを選択</span></div>
+  <div class="choice off">クレジットカード払い</div>
 </div>
-<script>
-var C={"waku":"invoice","kibo":"shoukibo","pc":"no","pos":"yes","tab":1};
-function swt(n){
-  ['tab1','tab3'].forEach(function(id){document.getElementById(id).classList.remove('on')});
-  ['body1','body3'].forEach(function(id){document.getElementById(id).classList.remove('on')});
-  document.getElementById('tab'+n).classList.add('on');
-  document.getElementById('body'+n).classList.add('on');
-  document.getElementById('fi1').className='fi'+(n===1?' cur':' done');
-  document.getElementById('fi3').className='fi'+(n===3?' cur':'');
-}
-function rb(){
-  var inv=C.waku==='invoice',sho=C.kibo==='shoukibo';
-  var badge=document.getElementById('kibo-badge');
-  badge.textContent=inv?(sho?'小規模事業者':'中小企業'):'通常枠';
-  document.getElementById('s6-none').classList.toggle('hidden',inv&&sho);
-  document.getElementById('s6-file').classList.toggle('hidden',!(inv&&sho));
-  document.getElementById('s8').classList.toggle('hidden',!inv);
-  document.getElementById('s9').classList.toggle('hidden',!inv);
-  if(inv){
-    document.getElementById('s8-yes').classList.toggle('hidden',C.pc!=='yes');
-    document.getElementById('s8-no').classList.toggle('hidden',C.pc!=='no');
-    document.getElementById('s9-yes').classList.toggle('hidden',C.pos!=='yes');
-    document.getElementById('s9-no').classList.toggle('hidden',C.pos!=='no');
-  }
-  var off=inv?2:0;
-  document.getElementById('na').textContent=8+off;
-  document.getElementById('nb').textContent=9+off;
-  document.getElementById('nc').textContent=10+off;
-}
-rb();swt(C.tab);
-</script>
+<p><span class="ui-btn">次へ</span></p>
+
+  </div>
+</li>
+<li class="guide-step">
+  <span class="guide-num">5</span>
+  <div class="guide-body">
+    <h3>支払証憑を添付する</h3>
+    
+<div class="file-chip">
+  <span class="file-num">2</span>
+  <div><div class="file-name">2_支払証憑_事業者名</div></div>
 </div>
+<p><span class="ui-btn">次へ</span></p>
+
+  </div>
+</li>
+<li class="guide-step">
+  <span class="guide-num">6</span>
+  <div class="guide-body">
+    <h3>その他資料を確認する</h3>
+    
+<p>従業員一覧を添付してください。</p>
+<div class="file-chip">
+  <span class="file-num">3</span>
+  <div><div class="file-name">3_従業員一覧_事業者名</div></div>
+</div>
+<p><span class="ui-btn">次へ</span></p>
+
+  </div>
+</li>
+<li class="guide-step">
+  <span class="guide-num">7</span>
+  <div class="guide-body">
+    <h3>ソフトウェア証憑を添付する</h3>
+    
+<div class="file-chip">
+  <span class="file-num">4</span>
+  <div><div class="file-name">4_ソフトウェア証憑_事業者名</div></div>
+</div>
+<p><span class="ui-btn">次へ</span></p>
+
+  </div>
+</li>
+<li class="guide-step">
+  <span class="guide-num">8</span>
+  <div class="guide-body">
+    <h3>ハードウェア導入情報（PC・タブレット等）</h3>
+    
+<p>PC・タブレット等を導入していない場合は「いいえ」を選択します。</p>
+<div class="choice-list"><div class="choice on">いいえ</div></div>
+<div class="note-box"><strong>ポイント</strong><p>「いいえ」を選ぶだけで進みます。</p></div>
+<p><span class="ui-btn">次へ</span></p>
+
+  </div>
+</li>
+<li class="guide-step">
+  <span class="guide-num">9</span>
+  <div class="guide-body">
+    <h3>ハードウェア導入情報（POSレジ等）</h3>
+    
+<p>POSレジ等の導入ありを選択し、次を添付します。</p>
+<div class="choice-list"><div class="choice on">はい</div></div>
+<div class="file-chip">
+  <span class="file-num">5</span>
+  <div><div class="file-name">5_ハードウェア導入情報（納品書）_事業者名</div><div class="file-sub">納品書欄</div></div>
+</div>
+<div class="file-chip">
+  <span class="file-num">6</span>
+  <div><div class="file-name">6_ハードウェア導入情報（現物写真）_事業者名</div><div class="file-sub">現物写真欄</div></div>
+</div>
+<p><span class="ui-btn">次へ</span></p>
+
+  </div>
+</li>
+<li class="guide-step">
+  <span class="guide-num">10</span>
+  <div class="guide-body">
+    <h3>口座情報を添付する</h3>
+    
+<div class="file-chip">
+  <span class="file-num">7</span>
+  <div><div class="file-name">7_口座情報_事業者名</div></div>
+</div>
+<p><span class="ui-btn">次へ</span></p>
+
+  </div>
+</li>
+<li class="guide-step">
+  <span class="guide-num">11</span>
+  <div class="guide-body">
+    <h3>口座情報を入力する</h3>
+    
+<p>添付したPDFを開き、画面の項目へ入力します。</p>
+<table>
+  <thead><tr><th>項目</th><th>入力方法</th></tr></thead>
+  <tbody>
+    <tr><th>金融機関名</th><td>PDFを開く → 下へスクロール →「検索」→ 全角カナで入力 → 余白クリック →「検索」→ 選択<br><span class="item-note">文字入力中は「検索」が押せません</span></td></tr>
+    <tr><th>支店名</th><td>金融機関名と同じ手順で検索・選択</td></tr>
+    <tr><th>口座名義（カナ）</th><td>金融機関登録の名義と完全一致が必要です（スペース・濁点に注意）<br><a class="btn btn-external" href="https://tinyurl.com/kouza-kana" target="_blank" rel="noopener">口座名義変換ツール</a></td></tr>
+  </tbody>
+</table>
+<p><span class="ui-btn">次へ</span></p>
+
+  </div>
+</li>
+<li class="guide-step last">
+  <span class="guide-num">12</span>
+  <div class="guide-body">
+    <h3>実績報告入力を完了する</h3>
+    
+<p>補助事業者入力確認画面で内容を確認し、一番下のボタンを押します。</p>
+<p><span class="ui-btn success">実績報告入力完了</span></p>
+<div class="note-box">
+  <strong>ここまでで①は完了</strong>
+  <p>IT導入支援事業者に引き継がれます。弊社確認後、③「事務局への提出」をご案内します。</p>
+</div>
+
+  </div>
+</li>
+  </ol>
+</section>
+
+<section class="guide-panel" id="guide-panel-3" hidden>
+  <ol class="guide-steps">
+<li class="guide-step">
+  <span class="guide-num">1</span>
+  <div class="guide-body">
+    <h3>申請マイページにログインする</h3>
+    
+<p><a class="btn btn-external" href="https://portal.shinsei.it-shien.smrj.go.jp/" target="_blank" rel="noopener">申請マイページを開く</a></p>
+<div class="ui-path"><span class="ui-path-item">申請者メニュー</span><span class="ui-path-sep">→</span><span class="ui-path-item primary">実績報告情報編集</span></div>
+
+  </div>
+</li>
+<li class="guide-step">
+  <span class="guide-num">2</span>
+  <div class="guide-body">
+    <h3>実績報告内容を最終確認する</h3>
+    
+<p>添付・入力内容が一覧表示されます。金額を含め、すべて確認してください。</p>
+<div class="callout"><strong>注意</strong><p>修正が必要な場合は「戻る」で対応できます。</p></div>
+<p><span class="ui-btn ghost">戻る</span> <span class="ui-btn">次へ</span></p>
+
+  </div>
+</li>
+<li class="guide-step">
+  <span class="guide-num">3</span>
+  <div class="guide-body">
+    <h3>SMS認証コードを発行・入力する</h3>
+    
+<ol>
+  <li>「認証コードを発行する」を押す</li>
+  <li>SMSで届いた4桁のコードを入力する</li>
+</ol>
+<div class="callout"><strong>有効期限</strong><p>認証コードは発行から30分間有効です。30分以内に提出まで完了してください。</p></div>
+<p><span class="ui-btn accent">認証コードを発行する</span></p>
+
+  </div>
+</li>
+<li class="guide-step last">
+  <span class="guide-num">4</span>
+  <div class="guide-body">
+    <h3>事務局へ提出する</h3>
+    
+<p>認証コード入力後、「事務局へ提出」を押します。</p>
+<p><span class="ui-btn success">事務局へ提出</span></p>
+<div class="note-box">
+  <strong>提出完了</strong>
+  <p>この画面が表示されれば完了です。その後、事務局による確定検査が行われます。</p>
+</div>
+<div class="callout"><strong>差し戻し時</strong><p>不備がある場合は事務局から連絡があります。速やかに対応してください。</p></div>
+
+  </div>
+</li>
+  </ol>
+</section>
