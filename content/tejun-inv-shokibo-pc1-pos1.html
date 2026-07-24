@@ -25,7 +25,47 @@
     <h3>申請マイページにログインする</h3>
     
 <p><a class="btn btn-external" href="https://portal.shinsei.it-shien.smrj.go.jp/" target="_blank" rel="noopener">申請マイページを開く</a></p>
+<div class="callout"><strong>推奨環境</strong><p>Windows の Microsoft Edge / Google Chrome の最新版での利用を推奨しています。</p></div>
+<div class="login-guide" data-login-guide>
+  <div class="login-tabs" role="tablist" aria-label="ログイン手順">
+    <button type="button" class="login-tab is-active" data-login-tab="1" role="tab" aria-selected="true">1. ログインボタン</button>
+    <button type="button" class="login-tab" data-login-tab="2" role="tab" aria-selected="false">2. ID・パスワード</button>
+    <button type="button" class="login-tab" data-login-tab="3" role="tab" aria-selected="false">3. 認証方法</button>
+    <button type="button" class="login-tab" data-login-tab="4" role="tab" aria-selected="false">4. アプリ認証</button>
+    <button type="button" class="login-tab" data-login-tab="5" role="tab" aria-selected="false">5. ログイン完了</button>
+  </div>
+  <div class="login-panel is-active" data-login-panel="1" role="tabpanel">
+    <p>申請マイページログイン画面で、紫色の <span class="ui-btn">GビズIDログイン</span> を押します。</p>
+  </div>
+  <div class="login-panel" data-login-panel="2" role="tabpanel" hidden>
+    <p>GビズIDのログイン画面で、申請時に使ったアカウント情報を入力します。</p>
+    <ol>
+      <li>アカウントID（メールアドレス）を入力する</li>
+      <li>パスワードを入力する</li>
+      <li><span class="ui-btn">ログイン</span> を押す</li>
+    </ol>
+  </div>
+  <div class="login-panel" data-login-panel="3" role="tabpanel" hidden>
+    <p>認証方法選択画面で、<span class="ui-btn">アプリ認証を行う</span> を押します。</p>
+    <div class="note-box"><strong>ポイント</strong><p>設定済みの認証方法のみ選択できます。スマホアプリに通知が届きます。</p></div>
+  </div>
+  <div class="login-panel" data-login-panel="4" role="tabpanel" hidden>
+    <p>PC画面に表示された4桁の認証コードを、GビズIDアプリへ入力します。</p>
+    <ol>
+      <li>スマホの通知（またはアプリ）で「はい」を押す</li>
+      <li>PCに表示されている認証コードを入力する</li>
+      <li>「認証する」を押す</li>
+    </ol>
+    <div class="callout"><strong>通知が届かないとき</strong><p>GビズIDアプリを手動で起動し、認証コードを入力してください。</p></div>
+  </div>
+  <div class="login-panel" data-login-panel="5" role="tabpanel" hidden>
+    <p>アプリに「ログインが完了しました」と表示されたら完了です。申請マイページが表示されます。</p>
+  </div>
+</div>
+
+<p>ログイン後、次のメニューへ進みます。</p>
 <div class="ui-path"><span class="ui-path-item">申請者メニュー</span><span class="ui-path-sep">→</span><span class="ui-path-item primary">実績報告情報編集</span></div>
+
 
   </div>
 </li>
@@ -34,7 +74,11 @@
   <div class="guide-body">
     <h3>説明画面を確認する</h3>
     
-<p>説明が表示されます。内容を確認し、下へスクロールして進みます。</p>
+<ol>
+  <li>「解約のオンライン研修動画」のリンクをクリックする</li>
+  <li>動画を視聴したら「戻る」で説明画面に戻る</li>
+  <li>「動画を視聴して…理解しました。」にチェックを入れる</li>
+</ol>
 <p><span class="ui-btn">次へ</span></p>
 
   </div>
@@ -163,12 +207,16 @@
     <h3>口座情報を入力する</h3>
     
 <p>添付したPDFを開き、画面の項目へ入力します。</p>
+<div class="callout">
+  <strong>口座名義は事前確認を</strong>
+  <p>金融機関登録の名義と<strong>完全一致</strong>が必要です（スペース・濁点に注意）。必ず事前に金融機関へご確認ください。</p>
+</div>
 <table>
   <thead><tr><th>項目</th><th>入力方法</th></tr></thead>
   <tbody>
-    <tr><th>金融機関名</th><td>PDFを開く → 下へスクロール →「検索」→ 全角カナで入力 → 余白クリック →「検索」→ 選択<br><span class="item-note">文字入力中は「検索」が押せません</span></td></tr>
+    <tr><th>金融機関名</th><td>PDFを開く → 下へスクロール → <strong>紫色の「検索」ボタン</strong>をクリック → 全角カナで入力 → 余白クリック →「検索」→ 選択<br><span class="item-note">文字入力中は「検索」が押せません</span></td></tr>
     <tr><th>支店名</th><td>金融機関名と同じ手順で検索・選択</td></tr>
-    <tr><th>口座名義（カナ）</th><td>金融機関登録の名義と完全一致が必要です（スペース・濁点に注意）<br><a class="btn btn-external" href="https://tinyurl.com/kouza-kana" target="_blank" rel="noopener">口座名義変換ツール</a></td></tr>
+    <tr><th>口座名義（カナ）</th><td>金融機関登録の名義と完全一致で入力（スペース・濁点に注意）<br><a class="btn btn-external" href="https://tinyurl.com/kouza-kana" target="_blank" rel="noopener">口座名義変換ツール</a></td></tr>
   </tbody>
 </table>
 <p><span class="ui-btn">次へ</span></p>
@@ -200,7 +248,47 @@
     <h3>申請マイページにログインする</h3>
     
 <p><a class="btn btn-external" href="https://portal.shinsei.it-shien.smrj.go.jp/" target="_blank" rel="noopener">申請マイページを開く</a></p>
+<div class="callout"><strong>推奨環境</strong><p>Windows の Microsoft Edge / Google Chrome の最新版での利用を推奨しています。</p></div>
+<div class="login-guide" data-login-guide>
+  <div class="login-tabs" role="tablist" aria-label="ログイン手順">
+    <button type="button" class="login-tab is-active" data-login-tab="1" role="tab" aria-selected="true">1. ログインボタン</button>
+    <button type="button" class="login-tab" data-login-tab="2" role="tab" aria-selected="false">2. ID・パスワード</button>
+    <button type="button" class="login-tab" data-login-tab="3" role="tab" aria-selected="false">3. 認証方法</button>
+    <button type="button" class="login-tab" data-login-tab="4" role="tab" aria-selected="false">4. アプリ認証</button>
+    <button type="button" class="login-tab" data-login-tab="5" role="tab" aria-selected="false">5. ログイン完了</button>
+  </div>
+  <div class="login-panel is-active" data-login-panel="1" role="tabpanel">
+    <p>申請マイページログイン画面で、紫色の <span class="ui-btn">GビズIDログイン</span> を押します。</p>
+  </div>
+  <div class="login-panel" data-login-panel="2" role="tabpanel" hidden>
+    <p>GビズIDのログイン画面で、申請時に使ったアカウント情報を入力します。</p>
+    <ol>
+      <li>アカウントID（メールアドレス）を入力する</li>
+      <li>パスワードを入力する</li>
+      <li><span class="ui-btn">ログイン</span> を押す</li>
+    </ol>
+  </div>
+  <div class="login-panel" data-login-panel="3" role="tabpanel" hidden>
+    <p>認証方法選択画面で、<span class="ui-btn">アプリ認証を行う</span> を押します。</p>
+    <div class="note-box"><strong>ポイント</strong><p>設定済みの認証方法のみ選択できます。スマホアプリに通知が届きます。</p></div>
+  </div>
+  <div class="login-panel" data-login-panel="4" role="tabpanel" hidden>
+    <p>PC画面に表示された4桁の認証コードを、GビズIDアプリへ入力します。</p>
+    <ol>
+      <li>スマホの通知（またはアプリ）で「はい」を押す</li>
+      <li>PCに表示されている認証コードを入力する</li>
+      <li>「認証する」を押す</li>
+    </ol>
+    <div class="callout"><strong>通知が届かないとき</strong><p>GビズIDアプリを手動で起動し、認証コードを入力してください。</p></div>
+  </div>
+  <div class="login-panel" data-login-panel="5" role="tabpanel" hidden>
+    <p>アプリに「ログインが完了しました」と表示されたら完了です。申請マイページが表示されます。</p>
+  </div>
+</div>
+
+<p>ログイン後、次のメニューへ進みます。</p>
 <div class="ui-path"><span class="ui-path-item">申請者メニュー</span><span class="ui-path-sep">→</span><span class="ui-path-item primary">実績報告情報編集</span></div>
+
 
   </div>
 </li>

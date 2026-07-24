@@ -473,9 +473,21 @@ figcaption{font-size:12px;color:var(--ink-light);margin-top:6px}
 .choice-tag{margin-left:8px;font-size:11.5px;font-weight:700;color:var(--brand)}
 .choice.off{opacity:.7}
 
+.login-guide{margin:10px 0 12px;border:1px solid var(--rule);background:#fff}
+.login-tabs{display:flex;flex-wrap:wrap;gap:0;border-bottom:1px solid var(--rule);background:var(--bg)}
+.login-tab{appearance:none;border:0;border-right:1px solid var(--rule);border-bottom:2px solid transparent;background:transparent;color:var(--ink-mid);font:inherit;font-size:12px;font-weight:700;padding:10px 10px;cursor:pointer;margin-bottom:-1px}
+.login-tab:hover:not(.is-active){color:var(--brand);background:var(--brand-soft)}
+.login-tab.is-active{color:var(--brand);background:#fff;border-bottom-color:var(--brand)}
+.login-panel{padding:14px 14px 12px}
+.login-panel[hidden]{display:none!important}
+.login-panel>p{margin:0 0 10px;font-size:14px;color:var(--ink-mid)}
+.login-panel ol{margin:0 0 10px;padding-left:1.25em;font-size:14px;color:var(--ink-mid);line-height:1.75}
+.login-panel .note-box,.login-panel .callout{margin:10px 0 0}
+
 @media (max-width:700px){
   .phase-flow{grid-template-columns:1fr}
   .guide-step{grid-template-columns:32px minmax(0,1fr);padding:14px 12px}
+  .login-tab{flex:1 1 40%;border-right:0;border-bottom:1px solid var(--rule);font-size:11.5px;padding:9px 8px}
 }
 
 @media (max-width:900px){
@@ -517,7 +529,7 @@ JS = """(function(){
     }
   });
 
-  // 入力手順タブ
+  // 入力手順タブ（①/③）
   document.querySelectorAll('[data-guide-tab]').forEach(function(btn){
     btn.addEventListener('click',function(){
       var id=btn.getAttribute('data-guide-tab');
@@ -526,6 +538,25 @@ JS = """(function(){
       root.querySelectorAll('.guide-panel').forEach(function(p){
         var show=p.id==='guide-panel-'+id;
         if(show)p.removeAttribute('hidden'); else p.setAttribute('hidden','');
+      });
+    });
+  });
+
+  // ログイン手順タブ
+  document.querySelectorAll('[data-login-guide]').forEach(function(guide){
+    guide.querySelectorAll('[data-login-tab]').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        var id=btn.getAttribute('data-login-tab');
+        guide.querySelectorAll('[data-login-tab]').forEach(function(b){
+          var on=b===btn;
+          b.classList.toggle('is-active',on);
+          b.setAttribute('aria-selected',String(on));
+        });
+        guide.querySelectorAll('[data-login-panel]').forEach(function(p){
+          var show=p.getAttribute('data-login-panel')===id;
+          p.classList.toggle('is-active',show);
+          if(show)p.removeAttribute('hidden'); else p.setAttribute('hidden','');
+        });
       });
     });
   });
