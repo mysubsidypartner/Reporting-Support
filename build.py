@@ -220,6 +220,7 @@ TEMPLATE = """<!DOCTYPE html>
       <span class="nav-toggle-bars" aria-hidden="true"></span>目次
     </button>
   </div>
+  <p class="masthead-notice">本サイトの無断転載・無断複製・無断転用・第三者への再配布を固く禁じます。</p>
 </header>
 
 <div class="shell">
@@ -286,12 +287,18 @@ a:hover{color:var(--brand-mid)}
 .brand{display:flex;align-items:baseline;gap:14px;text-decoration:none;color:inherit}
 .brand-name{font-size:15px;font-weight:700;letter-spacing:.06em;color:var(--ink);padding-left:12px;border-left:3px solid var(--brand)}
 .brand-sub{font-size:12px;color:var(--ink-light);font-weight:500}
+.masthead-notice{
+  margin:0;padding:8px 28px;border-top:1px solid var(--warn-border);
+  background:var(--warn-bg);color:var(--warn);font-size:12px;font-weight:600;line-height:1.5;
+  text-align:center;
+}
+.masthead-notice::before{content:"⚠️ ";}
 .nav-toggle{display:none;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--rule);font:inherit;font-size:13px;color:var(--ink);cursor:pointer;padding:7px 12px}
 .nav-toggle-bars{width:14px;height:1.5px;background:var(--ink);box-shadow:0 5px var(--ink),0 -5px var(--ink)}
 
 .shell{max-width:var(--shell);margin:0 auto;padding:24px 28px 64px;display:grid;grid-template-columns:var(--sidebar) minmax(0,1fr);gap:24px;align-items:start}
 
-.sidebar{position:sticky;top:74px;align-self:start;max-height:calc(100vh - 98px);overflow-y:auto;background:var(--surface);border:1px solid var(--rule)}
+.sidebar{position:sticky;top:98px;align-self:start;max-height:calc(100vh - 122px);overflow-y:auto;background:var(--surface);border:1px solid var(--rule)}
 .sidebar::-webkit-scrollbar{width:4px}
 .sidebar::-webkit-scrollbar-thumb{background:#c9d2de}
 .nav-label{margin:0;padding:14px 16px 8px;font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--ink-light)}
@@ -473,6 +480,7 @@ figcaption{font-size:12px;color:var(--ink-light);margin-top:6px}
 
 @media (max-width:900px){
   .masthead-inner{padding:0 16px;height:52px}
+  .masthead-notice{padding:8px 16px;font-size:11.5px;text-align:left}
   .shell{grid-template-columns:1fr;gap:0;padding:16px 16px 48px}
   .sidebar{position:static;max-height:none;display:none;margin-bottom:16px}
   .sidebar.open{display:block}
