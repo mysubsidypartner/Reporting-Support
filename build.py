@@ -31,6 +31,8 @@ PAGES = [
     ("tejun-inv-shokibo-pc0-pos1", "インボイス枠｜小規模事業者｜PC:なし｜POS:あり", "tejun"),
     ("tejun-inv-shokibo-pc0-pos0", "インボイス枠｜小規模事業者｜PC:なし｜POS:なし", "tejun"),
     ("tejun-teishutsu", "全枠共通（事務局への提出）", "tejun"),
+    ("sonota", "その他", None),
+    ("sonota-jisshi", "【役務導入者】実施実態資料", "sonota"),
 ]
 
 
@@ -48,6 +50,7 @@ NAV_SHORT = {
     "tejun-inv-shokibo-pc0-pos1": "小規模｜PC✕ POS○",
     "tejun-inv-shokibo-pc0-pos0": "小規模｜PC✕ POS✕",
     "tejun-teishutsu": "事務局への提出",
+    "sonota-jisshi": "実施実態資料",
 }
 
 ORDER = [p[0] for p in PAGES]
@@ -364,6 +367,8 @@ figcaption{font-size:12px;color:var(--ink-light);margin-top:6px}
 .callout strong{display:block;font-size:12.5px;color:var(--warn);margin-bottom:4px;font-weight:700}
 .callout p{margin:0;font-size:13.5px;color:#7c2d12;line-height:1.75}
 .callout p+p,.callout ol,.callout ul{margin-top:8px}
+.callout ul{padding-left:1.2em;margin:8px 0 0;font-size:13.5px;color:#7c2d12;line-height:1.75}
+.callout li{margin:0 0 4px}
 .callout .btn{margin-top:10px}
 
 .note-box{margin:16px 0;padding:14px 16px;background:var(--brand-soft);border:1px solid #c9dceb;border-left:3px solid var(--brand)}
