@@ -20,6 +20,8 @@ PAGES = [
     ("jisseki-hw-nouhin", "【ハードウェア導入者】ハードウェアの納品書", "jisseki"),
     ("jisseki-hw-shashin", "【ハードウェア導入者】ハードウェアの写真", "jisseki"),
     ("jisseki-juugyouin", "【小規模事業者】従業員一覧", "jisseki"),
+    ("sonota", "その他", None),
+    ("sonota-jisshi", "【役務導入者】実施実態資料", "sonota"),
     ("tejun", "実績報告入力手順", None),
     ("tejun-tsujo", "通常枠", "tejun"),
     ("tejun-inv-chusho-pc1-pos1", "インボイス枠｜中小企業｜PC:あり｜POS:あり", "tejun"),
@@ -31,8 +33,6 @@ PAGES = [
     ("tejun-inv-shokibo-pc0-pos1", "インボイス枠｜小規模事業者｜PC:なし｜POS:あり", "tejun"),
     ("tejun-inv-shokibo-pc0-pos0", "インボイス枠｜小規模事業者｜PC:なし｜POS:なし", "tejun"),
     ("tejun-teishutsu", "全枠共通（事務局への提出）", "tejun"),
-    ("sonota", "その他", None),
-    ("sonota-jisshi", "【役務導入者】実施実態資料", "sonota"),
 ]
 
 
